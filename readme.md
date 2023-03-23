@@ -22,3 +22,5 @@ make upgrade-local
 - localhost:30080 (default port: 30080) 접속
   - username: admin
   - password: config - secrets - argocd-initial-admin-password passwrod 확인
+
+- sample yaml: https://github.com/Kyeongrok/k8s_yamls/blob/master/deploy_nginx.yml
