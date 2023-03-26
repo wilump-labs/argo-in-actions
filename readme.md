@@ -30,6 +30,11 @@ make upgrade-local
 - Settings - Projects 생성
 - Applications - New App 생성 및 Sync
 
-### Argo declarative setup
+### ArgoCD declarative setup
 - 직접 사이트에 접속해서 프로젝트 & 앱을 하나하나 생성할 필요없이 k8s 코드(yaml 파일)를 통해 자동화 가능 
 - https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup
+
+### ArgoCD app-of-apps
+- cluster bootstrapping
+  - https://argo-cd.readthedocs.io/en/stable/operator-manual/cluster-bootstrapping
+- ArgoCD 내에 먼저 애플리케이션을 배포하고, ArgoCD 내에 필요한 애플리케이션들이 해당 애플리케이션이 설
