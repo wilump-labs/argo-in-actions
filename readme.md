@@ -54,5 +54,15 @@ make upgrade-local
 - 외부 identity provider를 통해 인증
 - https://argo-cd.readthedocs.io/en/stable/operator-manual/user-management
 
+### ArgoCD with github actions 
+<img width="716" alt="스크린샷" src="https://user-images.githubusercontent.com/59307414/227792196-25d48f8e-3b6a-417c-ad50-2f664c14563e.png">
 
+- app repostitory workflows에 github actions을 통해 ci/cd script를 작성
+  - ci: test, build, image push
+  - cd: config repository의 명시 버전 수정 커밋
+- argo cd autho sync가 되어있는 경우 자체적으로 새로운 버전 배포
+  - 하지만 argo repo server에서 config repository를 항한 polling 주기가 3분이기 때문에 즉시 반영되지는 않음
+  - 즉시 반영하고 싶은 경우 직접 refresh해야함
+- 즉시 반영을 위해서는 config repository에서 webhook을 전송하는 방법도 존재(아래 구조)
 
+<img width="712" alt="스크린샷" src="https://user-images.githubusercontent.com/59307414/227792284-14054516-37fa-4873-b94b-b92892bdf8f3.png">
