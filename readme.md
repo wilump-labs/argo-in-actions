@@ -24,3 +24,8 @@ make upgrade-local
   - password: config - secrets - argocd-initial-admin-password passwrod 확인
 
 - sample yaml: https://github.com/Kyeongrok/k8s_yamls/blob/master/deploy_nginx.yml
+
+### Simple Usage
+- Settings - Repositories 생성
+- Settings - Projects 생성
+- Applications - New App 생성 및 Sync
