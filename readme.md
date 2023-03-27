@@ -72,3 +72,55 @@ make upgrade-local
 - https://argo-rollouts.readthedocs.io/en/stable/
   - https://medium.com/finda-tech/argo-cd%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%8B%A4%EC%96%91%ED%95%9C-%EB%B0%B0%ED%8F%AC-%EB%B0%A9%EC%8B%9D%EC%9D%84-%EC%A7%80%EC%9B%90%ED%95%98%EB%8A%94-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC-argo-rollouts-3a205abf7261
   - https://devocean.sk.com/blog/techBoardDetail.do?ID=163189
+
+### Basic Usage
+- demo: https://github.com/argoproj/rollouts-demo
+
+#### Requirements
+- Kubernetes cluster with argo-rollouts controller installed
+
+  ```shell
+  kubectl create namespace argo-rollouts
+  kubectl apply -n argo-rollouts -f https://github.com/argoproj/argo-rollouts/releases/latest/download/install.yaml
+  ```
+
+- kubectl with argo-rollouts plugin installed
+
+  ```shell
+  brew install argoproj/tap/kubectl-argo-rollouts
+  ```
+
+- ref. https://argoproj.github.io/argo-rollouts/installation/#controller-installation
+
+#### 1. Deploying a Rollout
+```shell
+kubectl argo rollouts get rollout rollouts-demo --watch
+```
+
+#### 2. Updating a Rollout
+```shell
+kubectl argo rollouts set image rollouts-demo rollouts-demo=argoproj/rollouts-demo:yellow
+
+kubectl argo rollouts get rollout rollouts-demo --watch
+```
+
+#### 3. Promoting a Rollout¶
+```shell 
+kubectl argo rollouts promote rollouts-demo
+
+kubectl argo rollouts get rollout rollouts-demo --watch
+```
+
+#### 4. Aborting a Rollout
+```shell
+kubectl argo rollouts set image rollouts-demo rollouts-demo=argoproj/rollouts-demo:red
+
+kubectl argo rollouts abort rollouts-demo
+```
+
+#### Dashboard
+```shell
+kubectl argo rollouts dashboard
+```
+
+- ref. https://argoproj.github.io/argo-rollouts/getting-started/
