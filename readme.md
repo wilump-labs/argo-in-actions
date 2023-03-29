@@ -70,8 +70,11 @@ make upgrade-local
 ## Argo Rollouts
 - ArgoCD를 이용하여 배포 시 다양한 형태(e.g. blue/green canary, etc)의 배포 방법을 지원하기 위한 라이브러리
 - https://argo-rollouts.readthedocs.io/en/stable/
-  - https://medium.com/finda-tech/argo-cd%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%8B%A4%EC%96%91%ED%95%9C-%EB%B0%B0%ED%8F%AC-%EB%B0%A9%EC%8B%9D%EC%9D%84-%EC%A7%80%EC%9B%90%ED%95%98%EB%8A%94-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC-argo-rollouts-3a205abf7261
-  - https://devocean.sk.com/blog/techBoardDetail.do?ID=163189
+
+#### References
+- https://potato-yong.tistory.com/138
+- https://devocean.sk.com/blog/techBoardDetail.do?ID=163189
+- https://medium.com/finda-tech/argo-cd%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EB%8B%A4%EC%96%91%ED%95%9C-%EB%B0%B0%ED%8F%AC-%EB%B0%A9%EC%8B%9D%EC%9D%84-%EC%A7%80%EC%9B%90%ED%95%98%EB%8A%94-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC-argo-rollouts-3a205abf7261
 
 ### Basic Usage
 - demo: https://github.com/argoproj/rollouts-demo
