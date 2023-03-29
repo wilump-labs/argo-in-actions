@@ -17,8 +17,8 @@ spec:
     spec:
       containers:
         - name: rollout-bluegreen-demo
-          image: argoproj/rollouts-demo:blue
-          # image: argoproj/rollouts-demo:green
+          # image: argoproj/rollouts-demo:blue
+          image: argoproj/rollouts-demo:green
           imagePullPolicy: Always
           ports:
             - name: http
@@ -30,7 +30,7 @@ spec:
               cpu: 5m
   strategy:
     blueGreen:
-      autoPromotionEnabled: false
+      autoPromotionEnabled: true # 자동 배포 옵션
       activeService: rollout-bluegreen-demo-active # 이전의 배포된 Blue 서비스
       previewService: rollout-bluegreen-demo-preview # 새롭게 배포될 Green 서비스
 
