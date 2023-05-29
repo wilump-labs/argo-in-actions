@@ -1,4 +1,8 @@
 repoURL: 'https://github.com/wilump-labs/argo-in-actions.git'
+
+cluster:
+  namespace: dev
+
 apps:
   - name: sample-helm-1
     project: dev
