@@ -1,7 +1,7 @@
 repoURL: 'https://github.com/wilump-labs/argo-in-actions.git'
 
 cluster:
-  namespace: default
+  namespace: argo
 
 apps:
   - name: sample-helm-1
