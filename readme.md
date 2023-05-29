@@ -38,6 +38,8 @@ make upgrade-local
 - cluster bootstrapping
   - https://argo-cd.readthedocs.io/en/stable/operator-manual/cluster-bootstrapping
 - ArgoCD 내에 먼저 애플리케이션을 배포하고, ArgoCD 내에 필요한 애플리케이션들을 해당 애플리케이션이 설치
+- cluster bootstrapping(app of apps pattern)은 관리자 툴
+  - argo cd가 설치된 namespace에서 활용 가능 (Projects with access to the namespace in which Argo CD is installed effectively have admin-level privileges.)
 
 ### ArgoCD user management
 - 크게 local user, sso(dex)로 인증 방법 제공
