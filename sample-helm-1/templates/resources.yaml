@@ -29,7 +29,7 @@ spec:
   ports:
   - protocol: {{ .Values.service.protocol }}
     port: {{ .Values.service.port }}
-    targetPort: {{ .Values.service.targetProt }}
+    targetPort: {{ .Values.service.targetPort }}
     nodePort: {{ .Values.service.nodePort }}
   selector:
     {{- include "sample-helm.selectorLabels" . | nindent 8 }}
